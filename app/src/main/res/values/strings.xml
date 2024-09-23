@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">Mercadinho</string>
+    <string name="item_entry_title">Adicione um Alimento</string>
+    <string name="app_edit_title">Edite o Alimento</string>
+    <string name="item_details_title">Detalhes do Alimento</string>
+
+</resources>
