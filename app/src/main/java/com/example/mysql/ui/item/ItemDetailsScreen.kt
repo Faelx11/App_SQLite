@@ -110,7 +110,7 @@ fun ItemDetailsScreen(
                 .padding(16.dp)
                 .size(70.dp)
                 .align(Alignment.BottomEnd)
-                .offset(y = (-70.dp), x = (-30).dp)
+                .offset(y = (-70).dp, x = (-30).dp)
         ) {
             Icon(
                 Icons.Default.Edit,
@@ -136,6 +136,13 @@ fun ItemDetailsBody(
         verticalArrangement = Arrangement.spacedBy(16.dp)
     ){
         var deleteConfirmationRequired by rememberSaveable { mutableStateOf(false) }
+
+        ItemDetails(
+            item = itemDetailsUiState.itemDetails.toItem(),
+            modifier = Modifier
+                .fillMaxWidth()
+        )
+
         OutlinedButton(
             onClick = { deleteConfirmationRequired = true },
             modifier = Modifier
